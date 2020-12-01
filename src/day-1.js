@@ -32,8 +32,22 @@ const returnFirstSummedPair = (items) => {
   return is2020[0];
 };
 
+const get2020Multiplier = (items) => {
+  // So we want to make sure we get one item that is a matching pair
+  const hasItem2020 = returnFirstSummedPair(items);
+  hasItem2020;
+  // And then we want to return each item of the single pair
+  // multiplied by each other
+  if (hasItem2020.length > 0) {
+    return hasItem2020[0] * hasItem2020[1];
+  } else {
+    return false;
+  }
+};
+
 module.exports = {
   sumsTo2020,
   pairItems,
   returnFirstSummedPair,
+  get2020Multiplier,
 };

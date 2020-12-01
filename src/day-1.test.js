@@ -1,4 +1,9 @@
-const { sumsTo2020, pairItems, returnFirstSummedPair } = require("./day-1");
+const {
+  sumsTo2020,
+  pairItems,
+  returnFirstSummedPair,
+  get2020Multiplier,
+} = require("./day-1");
 
 describe("Sums To 2020 function", () => {
   it("Should return false if numbers do not sum to 2020", () => {
@@ -59,8 +64,30 @@ describe("Finds the first pair that equals 2020 summed", () => {
     const initial = [1721, 2019, 1, 299, 675, 1456];
     const actual = returnFirstSummedPair(initial);
     const expected = [1721, 299];
+    expect(actual).toEqual(expected);
+  });
+});
 
-    actual;
+describe("Returns a multiplier of 2020 items", () => {
+  it("Fails to return a multiplier for items that don't add to 2020", () => {
+    const initial = [1720, 979, 366, 299, 675, 1456];
+    const actual = get2020Multiplier(initial);
+
+    const expected = false;
+    expect(actual).toEqual(expected);
+  });
+  it("Returns a multiplier for items that don't add to 2020", () => {
+    const initial = [1721, 979, 366, 299, 675, 1456];
+    const actual = get2020Multiplier(initial);
+
+    const expected = 514579;
+    expect(actual).toEqual(expected);
+  });
+  it("Verify: Returns a multiplier for items that don't add to 2020", () => {
+    const initial = [2019, 979, 1, 299, 675, 1456];
+    const actual = get2020Multiplier(initial);
+
+    const expected = 2019;
     expect(actual).toEqual(expected);
   });
 });

@@ -31,13 +31,13 @@ Configure some tools:
 - [x] git
 - [x] push
 
-- [ ] Create a failing test for adding numbers to 2020
-- [ ] Create a dummy data passing adding numbers to 2020
+- [x] Create a failing test for adding numbers to 2020
+- [x] Create a dummy data passing adding numbers to 2020
 
-- [ ] Create a method for iterating that fails
-- [ ] Create a method that passes iterating
+- [x] Create a method for iterating that fails
+- [x] Create a method that passes iterating
 
-- [ ] Create a method that fails multiplying
-- [ ] Create a method that passes multiplying
+- [x] Create a method that fails multiplying
+- [x] Create a method that passes multiplying
 
-- [ ] Submit answer, then revise?
+- [x] Submit answer, then revise?
